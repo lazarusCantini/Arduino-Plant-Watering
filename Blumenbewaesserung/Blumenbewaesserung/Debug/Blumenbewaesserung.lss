@@ -1,0 +1,1532 @@
+
+Blumenbewaesserung.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  0000060e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000005ba  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  0000060e  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000640  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000098  00000000  00000000  0000067c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000015f3  00000000  00000000  00000714  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 0000087e  00000000  00000000  00001d07  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000008b8  00000000  00000000  00002585  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000108  00000000  00000000  00002e40  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000616  00000000  00000000  00002f48  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000a46  00000000  00000000  0000355e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000078  00000000  00000000  00003fa4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 62 00 	jmp	0xc4	; 0xc4 <__ctors_end>
+   4:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+   8:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+   c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  10:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  14:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  18:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  1c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  20:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  24:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  28:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  2c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  30:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  34:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  38:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  3c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  40:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  44:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  48:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  4c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  50:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  54:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  58:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  5c:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  60:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  64:	0c 94 6c 00 	jmp	0xd8	; 0xd8 <__bad_interrupt>
+  68:	94 00       	.word	0x0094	; ????
+  6a:	9d 00       	.word	0x009d	; ????
+  6c:	a6 00       	.word	0x00a6	; ????
+  6e:	af 00       	.word	0x00af	; ????
+  70:	b8 00       	.word	0x00b8	; ????
+  72:	c1 00       	.word	0x00c1	; ????
+  74:	ca 00       	.word	0x00ca	; ????
+  76:	d3 00       	.word	0x00d3	; ????
+  78:	ed 00       	.word	0x00ed	; ????
+  7a:	f6 00       	.word	0x00f6	; ????
+  7c:	ff 00       	.word	0x00ff	; ????
+  7e:	08 01       	movw	r0, r16
+  80:	11 01       	movw	r2, r2
+  82:	1a 01       	movw	r2, r20
+  84:	23 01       	movw	r4, r6
+  86:	3d 01       	movw	r6, r26
+  88:	45 01       	movw	r8, r10
+  8a:	4d 01       	movw	r8, r26
+  8c:	55 01       	movw	r10, r10
+  8e:	5d 01       	movw	r10, r26
+  90:	65 01       	movw	r12, r10
+  92:	6d 01       	movw	r12, r26
+  94:	75 01       	movw	r14, r10
+  96:	98 01       	movw	r18, r16
+  98:	a5 01       	movw	r20, r10
+  9a:	b2 01       	movw	r22, r4
+  9c:	bf 01       	movw	r22, r30
+  9e:	cc 01       	movw	r24, r24
+  a0:	d9 01       	movw	r26, r18
+  a2:	e6 01       	movw	r28, r12
+  a4:	f3 01       	movw	r30, r6
+  a6:	11 02       	muls	r17, r17
+  a8:	1e 02       	muls	r17, r30
+  aa:	2b 02       	muls	r18, r27
+  ac:	38 02       	muls	r19, r24
+  ae:	45 02       	muls	r20, r21
+  b0:	52 02       	muls	r21, r18
+  b2:	5f 02       	muls	r21, r31
+  b4:	7d 02       	muls	r23, r29
+  b6:	88 02       	muls	r24, r24
+  b8:	93 02       	muls	r25, r19
+  ba:	9e 02       	muls	r25, r30
+  bc:	a9 02       	muls	r26, r25
+  be:	b4 02       	muls	r27, r20
+  c0:	bf 02       	muls	r27, r31
+  c2:	ca 02       	muls	r28, r26
+
+000000c4 <__ctors_end>:
+  c4:	11 24       	eor	r1, r1
+  c6:	1f be       	out	0x3f, r1	; 63
+  c8:	cf ef       	ldi	r28, 0xFF	; 255
+  ca:	d8 e0       	ldi	r29, 0x08	; 8
+  cc:	de bf       	out	0x3e, r29	; 62
+  ce:	cd bf       	out	0x3d, r28	; 61
+  d0:	0e 94 6e 00 	call	0xdc	; 0xdc <main>
+  d4:	0c 94 db 02 	jmp	0x5b6	; 0x5b6 <_exit>
+
+000000d8 <__bad_interrupt>:
+  d8:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000dc <main>:
+#define F_CPU 16000000UL				// CPU Takt
+#endif
+
+
+int main(void)
+{
+  dc:	cf 93       	push	r28
+  de:	df 93       	push	r29
+  e0:	00 d0       	rcall	.+0      	; 0xe2 <main+0x6>
+  e2:	00 d0       	rcall	.+0      	; 0xe4 <main+0x8>
+  e4:	cd b7       	in	r28, 0x3d	; 61
+  e6:	de b7       	in	r29, 0x3e	; 62
+	Pin BuildInLed('B', 6, true);
+  e8:	21 e0       	ldi	r18, 0x01	; 1
+  ea:	46 e0       	ldi	r20, 0x06	; 6
+  ec:	62 e4       	ldi	r22, 0x42	; 66
+  ee:	ce 01       	movw	r24, r28
+  f0:	01 96       	adiw	r24, 0x01	; 1
+  f2:	0e 94 7d 01 	call	0x2fa	; 0x2fa <_ZN3PinC1Echb>
+	
+    /* Replace with your application code */
+	BuildInLed.setze_Status(true);
+  f6:	61 e0       	ldi	r22, 0x01	; 1
+  f8:	ce 01       	movw	r24, r28
+  fa:	01 96       	adiw	r24, 0x01	; 1
+  fc:	0e 94 84 01 	call	0x308	; 0x308 <_ZN3Pin12setze_StatusEb>
+ 100:	ff cf       	rjmp	.-2      	; 0x100 <main+0x24>
+
+00000102 <_ZN3Pin16initialisierePinEv>:
+{
+	private_Eingang = is_Eingang;
+}
+
+void Pin::initialisierePin()
+{
+ 102:	dc 01       	movw	r26, r24
+	if (private_Port == 'A')
+	{
+		//# warning "The choosen mC has no Port A. Only B,C,D are available"
+	}
+
+	if (private_Port == 'B')
+ 104:	8c 91       	ld	r24, X
+ 106:	82 34       	cpi	r24, 0x42	; 66
+ 108:	09 f0       	breq	.+2      	; 0x10c <_ZN3Pin16initialisierePinEv+0xa>
+ 10a:	55 c0       	rjmp	.+170    	; 0x1b6 <_ZN3Pin16initialisierePinEv+0xb4>
+	{
+		switch(private_Nummer_Pin)
+ 10c:	11 96       	adiw	r26, 0x01	; 1
+ 10e:	ec 91       	ld	r30, X
+ 110:	11 97       	sbiw	r26, 0x01	; 1
+ 112:	4e 2f       	mov	r20, r30
+ 114:	50 e0       	ldi	r21, 0x00	; 0
+ 116:	48 30       	cpi	r20, 0x08	; 8
+ 118:	51 05       	cpc	r21, r1
+ 11a:	08 f0       	brcs	.+2      	; 0x11e <_ZN3Pin16initialisierePinEv+0x1c>
+ 11c:	4c c0       	rjmp	.+152    	; 0x1b6 <_ZN3Pin16initialisierePinEv+0xb4>
+ 11e:	fa 01       	movw	r30, r20
+ 120:	ec 5c       	subi	r30, 0xCC	; 204
+ 122:	ff 4f       	sbci	r31, 0xFF	; 255
+ 124:	0c 94 d5 02 	jmp	0x5aa	; 0x5aa <__tablejump2__>
+		{
+			case 0:	if (private_Eingang == true)
+ 128:	12 96       	adiw	r26, 0x02	; 2
+ 12a:	8c 91       	ld	r24, X
+ 12c:	12 97       	sbiw	r26, 0x02	; 2
+ 12e:	88 23       	and	r24, r24
+ 130:	11 f0       	breq	.+4      	; 0x136 <_ZN3Pin16initialisierePinEv+0x34>
+			{DDRB &= ~(1 << DDB0);}
+ 132:	20 98       	cbi	0x04, 0	; 4
+ 134:	40 c0       	rjmp	.+128    	; 0x1b6 <_ZN3Pin16initialisierePinEv+0xb4>
+			else
+			{DDRB |= (1 << DDB0);}
+ 136:	20 9a       	sbi	0x04, 0	; 4
+ 138:	3e c0       	rjmp	.+124    	; 0x1b6 <_ZN3Pin16initialisierePinEv+0xb4>
+			break;
+			
+			case 1:	if (private_Eingang == true)
+ 13a:	12 96       	adiw	r26, 0x02	; 2
+ 13c:	8c 91       	ld	r24, X
+ 13e:	12 97       	sbiw	r26, 0x02	; 2
+ 140:	88 23       	and	r24, r24
+ 142:	11 f0       	breq	.+4      	; 0x148 <_ZN3Pin16initialisierePinEv+0x46>
+			{DDRB &= ~(1 << DDB1);}
+ 144:	21 98       	cbi	0x04, 1	; 4
+ 146:	37 c0       	rjmp	.+110    	; 0x1b6 <_ZN3Pin16initialisierePinEv+0xb4>
+			else
+			{DDRB |= (1 << DDB1);}
+ 148:	21 9a       	sbi	0x04, 1	; 4
+ 14a:	35 c0       	rjmp	.+106    	; 0x1b6 <_ZN3Pin16initialisierePinEv+0xb4>
+			break;
+			
+			case 2:	if (private_Eingang == true)
+ 14c:	12 96       	adiw	r26, 0x02	; 2
+ 14e:	8c 91       	ld	r24, X
+ 150:	12 97       	sbiw	r26, 0x02	; 2
+ 152:	88 23       	and	r24, r24
+ 154:	11 f0       	breq	.+4      	; 0x15a <_ZN3Pin16initialisierePinEv+0x58>
+			{DDRB &= ~(1 << DDB2);}
+ 156:	22 98       	cbi	0x04, 2	; 4
+ 158:	2e c0       	rjmp	.+92     	; 0x1b6 <_ZN3Pin16initialisierePinEv+0xb4>
+			else
+			{DDRB |= (1 << DDB2);}
+ 15a:	22 9a       	sbi	0x04, 2	; 4
+ 15c:	2c c0       	rjmp	.+88     	; 0x1b6 <_ZN3Pin16initialisierePinEv+0xb4>
+			break;
+			
+			case 3:	if (private_Eingang == true)
+ 15e:	12 96       	adiw	r26, 0x02	; 2
+ 160:	8c 91       	ld	r24, X
+ 162:	12 97       	sbiw	r26, 0x02	; 2
+ 164:	88 23       	and	r24, r24
+ 166:	11 f0       	breq	.+4      	; 0x16c <_ZN3Pin16initialisierePinEv+0x6a>
+			{DDRB &= ~(1 << DDB3);}
+ 168:	23 98       	cbi	0x04, 3	; 4
+ 16a:	25 c0       	rjmp	.+74     	; 0x1b6 <_ZN3Pin16initialisierePinEv+0xb4>
+			else
+			{DDRB |= (1 << DDB3);}
+ 16c:	23 9a       	sbi	0x04, 3	; 4
+ 16e:	23 c0       	rjmp	.+70     	; 0x1b6 <_ZN3Pin16initialisierePinEv+0xb4>
+			break;
+			
+			case 4:	if (private_Eingang == true)
+ 170:	12 96       	adiw	r26, 0x02	; 2
+ 172:	8c 91       	ld	r24, X
+ 174:	12 97       	sbiw	r26, 0x02	; 2
+ 176:	88 23       	and	r24, r24
+ 178:	11 f0       	breq	.+4      	; 0x17e <_ZN3Pin16initialisierePinEv+0x7c>
+			{DDRB &= ~(1 << DDB4);}
+ 17a:	24 98       	cbi	0x04, 4	; 4
+ 17c:	1c c0       	rjmp	.+56     	; 0x1b6 <_ZN3Pin16initialisierePinEv+0xb4>
+			else
+			{DDRB |= (1 << DDB4);}
+ 17e:	24 9a       	sbi	0x04, 4	; 4
+ 180:	1a c0       	rjmp	.+52     	; 0x1b6 <_ZN3Pin16initialisierePinEv+0xb4>
+			break;
+			
+			case 5:	if (private_Eingang == true)
+ 182:	12 96       	adiw	r26, 0x02	; 2
+ 184:	8c 91       	ld	r24, X
+ 186:	12 97       	sbiw	r26, 0x02	; 2
+ 188:	88 23       	and	r24, r24
+ 18a:	11 f0       	breq	.+4      	; 0x190 <_ZN3Pin16initialisierePinEv+0x8e>
+			{DDRB &= ~(1 << DDB5);}
+ 18c:	25 98       	cbi	0x04, 5	; 4
+ 18e:	13 c0       	rjmp	.+38     	; 0x1b6 <_ZN3Pin16initialisierePinEv+0xb4>
+			else
+			{DDRB |= (1 << DDB5);}
+ 190:	25 9a       	sbi	0x04, 5	; 4
+ 192:	11 c0       	rjmp	.+34     	; 0x1b6 <_ZN3Pin16initialisierePinEv+0xb4>
+			break;
+			
+			case 6:	if (private_Eingang == true)
+ 194:	12 96       	adiw	r26, 0x02	; 2
+ 196:	8c 91       	ld	r24, X
+ 198:	12 97       	sbiw	r26, 0x02	; 2
+ 19a:	88 23       	and	r24, r24
+ 19c:	11 f0       	breq	.+4      	; 0x1a2 <_ZN3Pin16initialisierePinEv+0xa0>
+			{DDRB &= ~(1 << DDB6);}
+ 19e:	26 98       	cbi	0x04, 6	; 4
+ 1a0:	0a c0       	rjmp	.+20     	; 0x1b6 <_ZN3Pin16initialisierePinEv+0xb4>
+			else
+			{DDRB |= (1 << DDB6);}
+ 1a2:	26 9a       	sbi	0x04, 6	; 4
+ 1a4:	08 c0       	rjmp	.+16     	; 0x1b6 <_ZN3Pin16initialisierePinEv+0xb4>
+			break;
+			
+			case 7:	if (private_Eingang == true)
+ 1a6:	12 96       	adiw	r26, 0x02	; 2
+ 1a8:	8c 91       	ld	r24, X
+ 1aa:	12 97       	sbiw	r26, 0x02	; 2
+ 1ac:	88 23       	and	r24, r24
+ 1ae:	11 f0       	breq	.+4      	; 0x1b4 <_ZN3Pin16initialisierePinEv+0xb2>
+			{DDRB &= ~(1 << DDB7);}
+ 1b0:	27 98       	cbi	0x04, 7	; 4
+ 1b2:	01 c0       	rjmp	.+2      	; 0x1b6 <_ZN3Pin16initialisierePinEv+0xb4>
+			else
+			{DDRB |= (1 << DDB7);}
+ 1b4:	27 9a       	sbi	0x04, 7	; 4
+			break;
+			
+		}
+	}
+
+	if (private_Port == 'C')
+ 1b6:	8c 91       	ld	r24, X
+ 1b8:	83 34       	cpi	r24, 0x43	; 67
+ 1ba:	09 f0       	breq	.+2      	; 0x1be <_ZN3Pin16initialisierePinEv+0xbc>
+ 1bc:	4c c0       	rjmp	.+152    	; 0x256 <_ZN3Pin16initialisierePinEv+0x154>
+	{
+		switch(private_Nummer_Pin)
+ 1be:	11 96       	adiw	r26, 0x01	; 1
+ 1c0:	ec 91       	ld	r30, X
+ 1c2:	11 97       	sbiw	r26, 0x01	; 1
+ 1c4:	4e 2f       	mov	r20, r30
+ 1c6:	50 e0       	ldi	r21, 0x00	; 0
+ 1c8:	47 30       	cpi	r20, 0x07	; 7
+ 1ca:	51 05       	cpc	r21, r1
+ 1cc:	08 f0       	brcs	.+2      	; 0x1d0 <_ZN3Pin16initialisierePinEv+0xce>
+ 1ce:	43 c0       	rjmp	.+134    	; 0x256 <_ZN3Pin16initialisierePinEv+0x154>
+ 1d0:	fa 01       	movw	r30, r20
+ 1d2:	e4 5c       	subi	r30, 0xC4	; 196
+ 1d4:	ff 4f       	sbci	r31, 0xFF	; 255
+ 1d6:	0c 94 d5 02 	jmp	0x5aa	; 0x5aa <__tablejump2__>
+		{
+			case 0:	if (private_Eingang == true)
+ 1da:	12 96       	adiw	r26, 0x02	; 2
+ 1dc:	8c 91       	ld	r24, X
+ 1de:	12 97       	sbiw	r26, 0x02	; 2
+ 1e0:	88 23       	and	r24, r24
+ 1e2:	11 f0       	breq	.+4      	; 0x1e8 <_ZN3Pin16initialisierePinEv+0xe6>
+			{DDRC &= ~(1 << DDC0);}
+ 1e4:	38 98       	cbi	0x07, 0	; 7
+ 1e6:	37 c0       	rjmp	.+110    	; 0x256 <_ZN3Pin16initialisierePinEv+0x154>
+			else
+			{DDRC |= (1 << DDC0);}
+ 1e8:	38 9a       	sbi	0x07, 0	; 7
+ 1ea:	35 c0       	rjmp	.+106    	; 0x256 <_ZN3Pin16initialisierePinEv+0x154>
+			break;
+			
+			case 1:	if (private_Eingang == true)
+ 1ec:	12 96       	adiw	r26, 0x02	; 2
+ 1ee:	8c 91       	ld	r24, X
+ 1f0:	12 97       	sbiw	r26, 0x02	; 2
+ 1f2:	88 23       	and	r24, r24
+ 1f4:	11 f0       	breq	.+4      	; 0x1fa <_ZN3Pin16initialisierePinEv+0xf8>
+			{DDRC &= ~(1 << DDC1);}
+ 1f6:	39 98       	cbi	0x07, 1	; 7
+ 1f8:	2e c0       	rjmp	.+92     	; 0x256 <_ZN3Pin16initialisierePinEv+0x154>
+			else
+			{DDRC |= (1 << DDC1);}
+ 1fa:	39 9a       	sbi	0x07, 1	; 7
+ 1fc:	2c c0       	rjmp	.+88     	; 0x256 <_ZN3Pin16initialisierePinEv+0x154>
+			break;
+			
+			case 2:	if (private_Eingang == true)
+ 1fe:	12 96       	adiw	r26, 0x02	; 2
+ 200:	8c 91       	ld	r24, X
+ 202:	12 97       	sbiw	r26, 0x02	; 2
+ 204:	88 23       	and	r24, r24
+ 206:	11 f0       	breq	.+4      	; 0x20c <_ZN3Pin16initialisierePinEv+0x10a>
+			{DDRC &= ~(1 << DDC2);}
+ 208:	3a 98       	cbi	0x07, 2	; 7
+ 20a:	25 c0       	rjmp	.+74     	; 0x256 <_ZN3Pin16initialisierePinEv+0x154>
+			else
+			{DDRC |= (1 << DDC2);}
+ 20c:	3a 9a       	sbi	0x07, 2	; 7
+ 20e:	23 c0       	rjmp	.+70     	; 0x256 <_ZN3Pin16initialisierePinEv+0x154>
+			break;
+			
+			case 3:	if (private_Eingang == true)
+ 210:	12 96       	adiw	r26, 0x02	; 2
+ 212:	8c 91       	ld	r24, X
+ 214:	12 97       	sbiw	r26, 0x02	; 2
+ 216:	88 23       	and	r24, r24
+ 218:	11 f0       	breq	.+4      	; 0x21e <_ZN3Pin16initialisierePinEv+0x11c>
+			{DDRC &= ~(1 << DDC3);}
+ 21a:	3b 98       	cbi	0x07, 3	; 7
+ 21c:	1c c0       	rjmp	.+56     	; 0x256 <_ZN3Pin16initialisierePinEv+0x154>
+			else
+			{DDRC |= (1 << DDC3);}
+ 21e:	3b 9a       	sbi	0x07, 3	; 7
+ 220:	1a c0       	rjmp	.+52     	; 0x256 <_ZN3Pin16initialisierePinEv+0x154>
+			break;
+			
+			case 4:	if (private_Eingang == true)
+ 222:	12 96       	adiw	r26, 0x02	; 2
+ 224:	8c 91       	ld	r24, X
+ 226:	12 97       	sbiw	r26, 0x02	; 2
+ 228:	88 23       	and	r24, r24
+ 22a:	11 f0       	breq	.+4      	; 0x230 <_ZN3Pin16initialisierePinEv+0x12e>
+			{DDRC &= ~(1 << DDC4);}
+ 22c:	3c 98       	cbi	0x07, 4	; 7
+ 22e:	13 c0       	rjmp	.+38     	; 0x256 <_ZN3Pin16initialisierePinEv+0x154>
+			else
+			{DDRC |= (1 << DDC4);}
+ 230:	3c 9a       	sbi	0x07, 4	; 7
+ 232:	11 c0       	rjmp	.+34     	; 0x256 <_ZN3Pin16initialisierePinEv+0x154>
+			break;
+			
+			case 5:	if (private_Eingang == true)
+ 234:	12 96       	adiw	r26, 0x02	; 2
+ 236:	8c 91       	ld	r24, X
+ 238:	12 97       	sbiw	r26, 0x02	; 2
+ 23a:	88 23       	and	r24, r24
+ 23c:	11 f0       	breq	.+4      	; 0x242 <_ZN3Pin16initialisierePinEv+0x140>
+			{DDRC &= ~(1 << DDC5);}
+ 23e:	3d 98       	cbi	0x07, 5	; 7
+ 240:	0a c0       	rjmp	.+20     	; 0x256 <_ZN3Pin16initialisierePinEv+0x154>
+			else
+			{DDRC |= (1 << DDC5);}
+ 242:	3d 9a       	sbi	0x07, 5	; 7
+ 244:	08 c0       	rjmp	.+16     	; 0x256 <_ZN3Pin16initialisierePinEv+0x154>
+			break;
+			
+			case 6:	if (private_Eingang == true)
+ 246:	12 96       	adiw	r26, 0x02	; 2
+ 248:	8c 91       	ld	r24, X
+ 24a:	12 97       	sbiw	r26, 0x02	; 2
+ 24c:	88 23       	and	r24, r24
+ 24e:	11 f0       	breq	.+4      	; 0x254 <_ZN3Pin16initialisierePinEv+0x152>
+			{DDRC &= ~(1 << DDC6);}
+ 250:	3e 98       	cbi	0x07, 6	; 7
+ 252:	01 c0       	rjmp	.+2      	; 0x256 <_ZN3Pin16initialisierePinEv+0x154>
+			else
+			{DDRC |= (1 << DDC6);}
+ 254:	3e 9a       	sbi	0x07, 6	; 7
+			break;
+			
+		}
+	}
+	
+	if (private_Port == 'D')
+ 256:	8c 91       	ld	r24, X
+ 258:	84 34       	cpi	r24, 0x44	; 68
+ 25a:	09 f0       	breq	.+2      	; 0x25e <_ZN3Pin16initialisierePinEv+0x15c>
+ 25c:	4d c0       	rjmp	.+154    	; 0x2f8 <_ZN3Pin16initialisierePinEv+0x1f6>
+	{
+		switch(private_Nummer_Pin)
+ 25e:	11 96       	adiw	r26, 0x01	; 1
+ 260:	ec 91       	ld	r30, X
+ 262:	11 97       	sbiw	r26, 0x01	; 1
+ 264:	4e 2f       	mov	r20, r30
+ 266:	50 e0       	ldi	r21, 0x00	; 0
+ 268:	48 30       	cpi	r20, 0x08	; 8
+ 26a:	51 05       	cpc	r21, r1
+ 26c:	08 f0       	brcs	.+2      	; 0x270 <_ZN3Pin16initialisierePinEv+0x16e>
+ 26e:	44 c0       	rjmp	.+136    	; 0x2f8 <_ZN3Pin16initialisierePinEv+0x1f6>
+ 270:	fa 01       	movw	r30, r20
+ 272:	ed 5b       	subi	r30, 0xBD	; 189
+ 274:	ff 4f       	sbci	r31, 0xFF	; 255
+ 276:	0c 94 d5 02 	jmp	0x5aa	; 0x5aa <__tablejump2__>
+		{
+			case 0:	if (private_Eingang == true)
+ 27a:	12 96       	adiw	r26, 0x02	; 2
+ 27c:	8c 91       	ld	r24, X
+ 27e:	88 23       	and	r24, r24
+ 280:	11 f0       	breq	.+4      	; 0x286 <_ZN3Pin16initialisierePinEv+0x184>
+			{DDRD &= ~(1 << DDD0);}
+ 282:	50 98       	cbi	0x0a, 0	; 10
+ 284:	08 95       	ret
+			else
+			{DDRD |= (1 << DDD0);}
+ 286:	50 9a       	sbi	0x0a, 0	; 10
+ 288:	08 95       	ret
+			break;
+			
+			case 1:	if (private_Eingang == true)
+ 28a:	12 96       	adiw	r26, 0x02	; 2
+ 28c:	8c 91       	ld	r24, X
+ 28e:	88 23       	and	r24, r24
+ 290:	11 f0       	breq	.+4      	; 0x296 <_ZN3Pin16initialisierePinEv+0x194>
+			{DDRD &= ~(1 << DDD1);}
+ 292:	51 98       	cbi	0x0a, 1	; 10
+ 294:	08 95       	ret
+			else
+			{DDRD |= (1 << DDD1);}
+ 296:	51 9a       	sbi	0x0a, 1	; 10
+ 298:	08 95       	ret
+			break;
+			
+			case 2:	if (private_Eingang == true)
+ 29a:	12 96       	adiw	r26, 0x02	; 2
+ 29c:	8c 91       	ld	r24, X
+ 29e:	88 23       	and	r24, r24
+ 2a0:	11 f0       	breq	.+4      	; 0x2a6 <_ZN3Pin16initialisierePinEv+0x1a4>
+			{DDRD &= ~(1 << DDD2);}
+ 2a2:	52 98       	cbi	0x0a, 2	; 10
+ 2a4:	08 95       	ret
+			else
+			{DDRD |= (1 << DDD2);}
+ 2a6:	52 9a       	sbi	0x0a, 2	; 10
+ 2a8:	08 95       	ret
+			break;
+			
+			case 3:	if (private_Eingang == true)
+ 2aa:	12 96       	adiw	r26, 0x02	; 2
+ 2ac:	8c 91       	ld	r24, X
+ 2ae:	88 23       	and	r24, r24
+ 2b0:	11 f0       	breq	.+4      	; 0x2b6 <_ZN3Pin16initialisierePinEv+0x1b4>
+			{DDRD &= ~(1 << DDD3);}
+ 2b2:	53 98       	cbi	0x0a, 3	; 10
+ 2b4:	08 95       	ret
+			else
+			{DDRD |= (1 << DDD3);}
+ 2b6:	53 9a       	sbi	0x0a, 3	; 10
+ 2b8:	08 95       	ret
+			break;
+			
+			case 4:	if (private_Eingang == true)
+ 2ba:	12 96       	adiw	r26, 0x02	; 2
+ 2bc:	8c 91       	ld	r24, X
+ 2be:	88 23       	and	r24, r24
+ 2c0:	11 f0       	breq	.+4      	; 0x2c6 <_ZN3Pin16initialisierePinEv+0x1c4>
+			{DDRD &= ~(1 << DDD4);}
+ 2c2:	54 98       	cbi	0x0a, 4	; 10
+ 2c4:	08 95       	ret
+			else
+			{DDRD |= (1 << DDD4);}
+ 2c6:	54 9a       	sbi	0x0a, 4	; 10
+ 2c8:	08 95       	ret
+			break;
+			
+			case 5:	if (private_Eingang == true)
+ 2ca:	12 96       	adiw	r26, 0x02	; 2
+ 2cc:	8c 91       	ld	r24, X
+ 2ce:	88 23       	and	r24, r24
+ 2d0:	11 f0       	breq	.+4      	; 0x2d6 <_ZN3Pin16initialisierePinEv+0x1d4>
+			{DDRD &= ~(1 << DDD5);}
+ 2d2:	55 98       	cbi	0x0a, 5	; 10
+ 2d4:	08 95       	ret
+			else
+			{DDRD |= (1 << DDD5);}
+ 2d6:	55 9a       	sbi	0x0a, 5	; 10
+ 2d8:	08 95       	ret
+			break;
+			
+			case 6:	if (private_Eingang == true)
+ 2da:	12 96       	adiw	r26, 0x02	; 2
+ 2dc:	8c 91       	ld	r24, X
+ 2de:	88 23       	and	r24, r24
+ 2e0:	11 f0       	breq	.+4      	; 0x2e6 <_ZN3Pin16initialisierePinEv+0x1e4>
+			{DDRD &= ~(1 << DDD6);}
+ 2e2:	56 98       	cbi	0x0a, 6	; 10
+ 2e4:	08 95       	ret
+			else
+			{DDRD |= (1 << DDD6);}
+ 2e6:	56 9a       	sbi	0x0a, 6	; 10
+ 2e8:	08 95       	ret
+			break;
+			
+			case 7:	if (private_Eingang == true)
+ 2ea:	12 96       	adiw	r26, 0x02	; 2
+ 2ec:	8c 91       	ld	r24, X
+ 2ee:	88 23       	and	r24, r24
+ 2f0:	11 f0       	breq	.+4      	; 0x2f6 <_ZN3Pin16initialisierePinEv+0x1f4>
+			{DDRD &= ~(1 << DDD7);}
+ 2f2:	57 98       	cbi	0x0a, 7	; 10
+ 2f4:	08 95       	ret
+			else
+			{DDRD |= (1 << DDD7);}
+ 2f6:	57 9a       	sbi	0x0a, 7	; 10
+ 2f8:	08 95       	ret
+
+000002fa <_ZN3PinC1Echb>:
+	return private_Nummer_Pin;
+}
+
+void Pin::setze_Port(char PortBuchstabe)
+{
+	private_Port = PortBuchstabe;
+ 2fa:	fc 01       	movw	r30, r24
+ 2fc:	60 83       	st	Z, r22
+}
+
+void Pin::setze_PinNummer(uint8_t Pin_Nummer)
+{
+	private_Nummer_Pin = Pin_Nummer;
+ 2fe:	41 83       	std	Z+1, r20	; 0x01
+}
+
+void Pin::setze_Richtung(bool is_Eingang)
+{
+	private_Eingang = is_Eingang;
+ 300:	22 83       	std	Z+2, r18	; 0x02
+{
+	//ctor
+	setze_Port(PublicPort);
+	setze_PinNummer(Public_Nummer_Pin);
+	setze_Richtung(Eingang);
+	initialisierePin();  
+ 302:	0e 94 81 00 	call	0x102	; 0x102 <_ZN3Pin16initialisierePinEv>
+ 306:	08 95       	ret
+
+00000308 <_ZN3Pin12setze_StatusEb>:
+
+
+}
+
+void Pin::setze_Status(bool Status)
+{
+ 308:	dc 01       	movw	r26, r24
+ 30a:	96 2f       	mov	r25, r22
+
+		if (private_Port == 'B')
+ 30c:	8c 91       	ld	r24, X
+ 30e:	82 34       	cpi	r24, 0x42	; 66
+ 310:	09 f0       	breq	.+2      	; 0x314 <_ZN3Pin12setze_StatusEb+0xc>
+ 312:	75 c0       	rjmp	.+234    	; 0x3fe <_ZN3Pin12setze_StatusEb+0xf6>
+		{
+			switch(private_Nummer_Pin)
+ 314:	11 96       	adiw	r26, 0x01	; 1
+ 316:	ec 91       	ld	r30, X
+ 318:	11 97       	sbiw	r26, 0x01	; 1
+ 31a:	4e 2f       	mov	r20, r30
+ 31c:	50 e0       	ldi	r21, 0x00	; 0
+ 31e:	48 30       	cpi	r20, 0x08	; 8
+ 320:	51 05       	cpc	r21, r1
+ 322:	08 f0       	brcs	.+2      	; 0x326 <_ZN3Pin12setze_StatusEb+0x1e>
+ 324:	6c c0       	rjmp	.+216    	; 0x3fe <_ZN3Pin12setze_StatusEb+0xf6>
+ 326:	fa 01       	movw	r30, r20
+ 328:	e5 5b       	subi	r30, 0xB5	; 181
+ 32a:	ff 4f       	sbci	r31, 0xFF	; 255
+ 32c:	0c 94 d5 02 	jmp	0x5aa	; 0x5aa <__tablejump2__>
+			{
+				case 0:	if (Status == true)
+ 330:	99 23       	and	r25, r25
+ 332:	31 f0       	breq	.+12     	; 0x340 <_ZN3Pin12setze_StatusEb+0x38>
+				{ PORTB |= (1<< PINB0);
+ 334:	28 9a       	sbi	0x05, 0	; 5
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 336:	81 e0       	ldi	r24, 0x01	; 1
+ 338:	13 96       	adiw	r26, 0x03	; 3
+ 33a:	8c 93       	st	X, r24
+ 33c:	13 97       	sbiw	r26, 0x03	; 3
+ 33e:	5f c0       	rjmp	.+190    	; 0x3fe <_ZN3Pin12setze_StatusEb+0xf6>
+			{
+				case 0:	if (Status == true)
+				{ PORTB |= (1<< PINB0);
+					merke_status(true);}
+				else
+				{PORTB &= ~(1<<PINB0);
+ 340:	28 98       	cbi	0x05, 0	; 5
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 342:	13 96       	adiw	r26, 0x03	; 3
+ 344:	1c 92       	st	X, r1
+ 346:	13 97       	sbiw	r26, 0x03	; 3
+ 348:	5a c0       	rjmp	.+180    	; 0x3fe <_ZN3Pin12setze_StatusEb+0xf6>
+				else
+				{PORTB &= ~(1<<PINB0);
+					merke_status(false);}
+				break;
+				
+				case 1:	if (Status == true)
+ 34a:	99 23       	and	r25, r25
+ 34c:	31 f0       	breq	.+12     	; 0x35a <_ZN3Pin12setze_StatusEb+0x52>
+				{ PORTB |= (1<< PINB1);
+ 34e:	29 9a       	sbi	0x05, 1	; 5
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 350:	81 e0       	ldi	r24, 0x01	; 1
+ 352:	13 96       	adiw	r26, 0x03	; 3
+ 354:	8c 93       	st	X, r24
+ 356:	13 97       	sbiw	r26, 0x03	; 3
+ 358:	52 c0       	rjmp	.+164    	; 0x3fe <_ZN3Pin12setze_StatusEb+0xf6>
+				
+				case 1:	if (Status == true)
+				{ PORTB |= (1<< PINB1);
+					merke_status(true);}
+				else
+				{PORTB &= ~(1<<PINB1);
+ 35a:	29 98       	cbi	0x05, 1	; 5
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 35c:	13 96       	adiw	r26, 0x03	; 3
+ 35e:	1c 92       	st	X, r1
+ 360:	13 97       	sbiw	r26, 0x03	; 3
+ 362:	4d c0       	rjmp	.+154    	; 0x3fe <_ZN3Pin12setze_StatusEb+0xf6>
+				else
+				{PORTB &= ~(1<<PINB1);
+					merke_status(false);}
+				break;
+				
+				case 2:	if (Status == true)
+ 364:	99 23       	and	r25, r25
+ 366:	31 f0       	breq	.+12     	; 0x374 <_ZN3Pin12setze_StatusEb+0x6c>
+				{ PORTB |= (1<< PINB2);
+ 368:	2a 9a       	sbi	0x05, 2	; 5
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 36a:	81 e0       	ldi	r24, 0x01	; 1
+ 36c:	13 96       	adiw	r26, 0x03	; 3
+ 36e:	8c 93       	st	X, r24
+ 370:	13 97       	sbiw	r26, 0x03	; 3
+ 372:	45 c0       	rjmp	.+138    	; 0x3fe <_ZN3Pin12setze_StatusEb+0xf6>
+				
+				case 2:	if (Status == true)
+				{ PORTB |= (1<< PINB2);
+					merke_status(true);}
+				else
+				{PORTB &= ~(1<<PINB2);
+ 374:	2a 98       	cbi	0x05, 2	; 5
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 376:	13 96       	adiw	r26, 0x03	; 3
+ 378:	1c 92       	st	X, r1
+ 37a:	13 97       	sbiw	r26, 0x03	; 3
+ 37c:	40 c0       	rjmp	.+128    	; 0x3fe <_ZN3Pin12setze_StatusEb+0xf6>
+				else
+				{PORTB &= ~(1<<PINB2);
+					merke_status(false);}
+				break;
+				
+				case 3:	if (Status == true)
+ 37e:	99 23       	and	r25, r25
+ 380:	31 f0       	breq	.+12     	; 0x38e <_ZN3Pin12setze_StatusEb+0x86>
+				{ PORTB |= (1<< PINB3);
+ 382:	2b 9a       	sbi	0x05, 3	; 5
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 384:	81 e0       	ldi	r24, 0x01	; 1
+ 386:	13 96       	adiw	r26, 0x03	; 3
+ 388:	8c 93       	st	X, r24
+ 38a:	13 97       	sbiw	r26, 0x03	; 3
+ 38c:	38 c0       	rjmp	.+112    	; 0x3fe <_ZN3Pin12setze_StatusEb+0xf6>
+				
+				case 3:	if (Status == true)
+				{ PORTB |= (1<< PINB3);
+					merke_status(true);}
+				else
+				{PORTB &= ~(1<<PINB3);
+ 38e:	2b 98       	cbi	0x05, 3	; 5
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 390:	13 96       	adiw	r26, 0x03	; 3
+ 392:	1c 92       	st	X, r1
+ 394:	13 97       	sbiw	r26, 0x03	; 3
+ 396:	33 c0       	rjmp	.+102    	; 0x3fe <_ZN3Pin12setze_StatusEb+0xf6>
+				else
+				{PORTB &= ~(1<<PINB3);
+					merke_status(false);}
+				break;
+				
+				case 4:	if (Status == true)
+ 398:	99 23       	and	r25, r25
+ 39a:	31 f0       	breq	.+12     	; 0x3a8 <_ZN3Pin12setze_StatusEb+0xa0>
+				{ PORTB |= (1<< PINB4);
+ 39c:	2c 9a       	sbi	0x05, 4	; 5
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 39e:	81 e0       	ldi	r24, 0x01	; 1
+ 3a0:	13 96       	adiw	r26, 0x03	; 3
+ 3a2:	8c 93       	st	X, r24
+ 3a4:	13 97       	sbiw	r26, 0x03	; 3
+ 3a6:	2b c0       	rjmp	.+86     	; 0x3fe <_ZN3Pin12setze_StatusEb+0xf6>
+				
+				case 4:	if (Status == true)
+				{ PORTB |= (1<< PINB4);
+					merke_status(true);}
+				else
+				{PORTB &= ~(1<<PINB4);
+ 3a8:	2c 98       	cbi	0x05, 4	; 5
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 3aa:	13 96       	adiw	r26, 0x03	; 3
+ 3ac:	1c 92       	st	X, r1
+ 3ae:	13 97       	sbiw	r26, 0x03	; 3
+ 3b0:	26 c0       	rjmp	.+76     	; 0x3fe <_ZN3Pin12setze_StatusEb+0xf6>
+				else
+				{PORTB &= ~(1<<PINB4);
+					merke_status(false);}
+				break;
+				
+				case 5:	if (Status == true)
+ 3b2:	99 23       	and	r25, r25
+ 3b4:	31 f0       	breq	.+12     	; 0x3c2 <_ZN3Pin12setze_StatusEb+0xba>
+				{ PORTB |= (1<< PINB5);
+ 3b6:	2d 9a       	sbi	0x05, 5	; 5
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 3b8:	81 e0       	ldi	r24, 0x01	; 1
+ 3ba:	13 96       	adiw	r26, 0x03	; 3
+ 3bc:	8c 93       	st	X, r24
+ 3be:	13 97       	sbiw	r26, 0x03	; 3
+ 3c0:	1e c0       	rjmp	.+60     	; 0x3fe <_ZN3Pin12setze_StatusEb+0xf6>
+				
+				case 5:	if (Status == true)
+				{ PORTB |= (1<< PINB5);
+					merke_status(true);}
+				else
+				{PORTB &= ~(1<<PINB5);
+ 3c2:	2d 98       	cbi	0x05, 5	; 5
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 3c4:	13 96       	adiw	r26, 0x03	; 3
+ 3c6:	1c 92       	st	X, r1
+ 3c8:	13 97       	sbiw	r26, 0x03	; 3
+ 3ca:	19 c0       	rjmp	.+50     	; 0x3fe <_ZN3Pin12setze_StatusEb+0xf6>
+				else
+				{PORTB &= ~(1<<PINB5);
+					merke_status(false);}
+				break;
+				
+				case 6:	if (Status == true)
+ 3cc:	99 23       	and	r25, r25
+ 3ce:	31 f0       	breq	.+12     	; 0x3dc <_ZN3Pin12setze_StatusEb+0xd4>
+				{ PORTB |= (1<< PINB6);
+ 3d0:	2e 9a       	sbi	0x05, 6	; 5
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 3d2:	81 e0       	ldi	r24, 0x01	; 1
+ 3d4:	13 96       	adiw	r26, 0x03	; 3
+ 3d6:	8c 93       	st	X, r24
+ 3d8:	13 97       	sbiw	r26, 0x03	; 3
+ 3da:	11 c0       	rjmp	.+34     	; 0x3fe <_ZN3Pin12setze_StatusEb+0xf6>
+				
+				case 6:	if (Status == true)
+				{ PORTB |= (1<< PINB6);
+					merke_status(true);}
+				else
+				{PORTB &= ~(1<<PINB6);
+ 3dc:	2e 98       	cbi	0x05, 6	; 5
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 3de:	13 96       	adiw	r26, 0x03	; 3
+ 3e0:	1c 92       	st	X, r1
+ 3e2:	13 97       	sbiw	r26, 0x03	; 3
+ 3e4:	0c c0       	rjmp	.+24     	; 0x3fe <_ZN3Pin12setze_StatusEb+0xf6>
+				else
+				{PORTB &= ~(1<<PINB6);
+					merke_status(false);}
+				break;
+				
+				case 7:	if (Status == true)
+ 3e6:	99 23       	and	r25, r25
+ 3e8:	31 f0       	breq	.+12     	; 0x3f6 <_ZN3Pin12setze_StatusEb+0xee>
+				{ PORTB |= (1<< PINB7);
+ 3ea:	2f 9a       	sbi	0x05, 7	; 5
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 3ec:	81 e0       	ldi	r24, 0x01	; 1
+ 3ee:	13 96       	adiw	r26, 0x03	; 3
+ 3f0:	8c 93       	st	X, r24
+ 3f2:	13 97       	sbiw	r26, 0x03	; 3
+ 3f4:	04 c0       	rjmp	.+8      	; 0x3fe <_ZN3Pin12setze_StatusEb+0xf6>
+				
+				case 7:	if (Status == true)
+				{ PORTB |= (1<< PINB7);
+					merke_status(true);}
+				else
+				{PORTB &= ~(1<<PINB7);
+ 3f6:	2f 98       	cbi	0x05, 7	; 5
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 3f8:	13 96       	adiw	r26, 0x03	; 3
+ 3fa:	1c 92       	st	X, r1
+ 3fc:	13 97       	sbiw	r26, 0x03	; 3
+				break;
+				
+			}
+		}
+
+		if (private_Port == 'C')
+ 3fe:	8c 91       	ld	r24, X
+ 400:	83 34       	cpi	r24, 0x43	; 67
+ 402:	09 f0       	breq	.+2      	; 0x406 <__LOCK_REGION_LENGTH__+0x6>
+ 404:	68 c0       	rjmp	.+208    	; 0x4d6 <__LOCK_REGION_LENGTH__+0xd6>
+		{
+			switch(private_Nummer_Pin)
+ 406:	11 96       	adiw	r26, 0x01	; 1
+ 408:	ec 91       	ld	r30, X
+ 40a:	11 97       	sbiw	r26, 0x01	; 1
+ 40c:	4e 2f       	mov	r20, r30
+ 40e:	50 e0       	ldi	r21, 0x00	; 0
+ 410:	47 30       	cpi	r20, 0x07	; 7
+ 412:	51 05       	cpc	r21, r1
+ 414:	08 f0       	brcs	.+2      	; 0x418 <__LOCK_REGION_LENGTH__+0x18>
+ 416:	5f c0       	rjmp	.+190    	; 0x4d6 <__LOCK_REGION_LENGTH__+0xd6>
+ 418:	fa 01       	movw	r30, r20
+ 41a:	ed 5a       	subi	r30, 0xAD	; 173
+ 41c:	ff 4f       	sbci	r31, 0xFF	; 255
+ 41e:	0c 94 d5 02 	jmp	0x5aa	; 0x5aa <__tablejump2__>
+			{
+				case 0:	if (Status == true)
+ 422:	99 23       	and	r25, r25
+ 424:	31 f0       	breq	.+12     	; 0x432 <__LOCK_REGION_LENGTH__+0x32>
+				{ PORTC |= (1<< PINC0);
+ 426:	40 9a       	sbi	0x08, 0	; 8
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 428:	81 e0       	ldi	r24, 0x01	; 1
+ 42a:	13 96       	adiw	r26, 0x03	; 3
+ 42c:	8c 93       	st	X, r24
+ 42e:	13 97       	sbiw	r26, 0x03	; 3
+ 430:	52 c0       	rjmp	.+164    	; 0x4d6 <__LOCK_REGION_LENGTH__+0xd6>
+			{
+				case 0:	if (Status == true)
+				{ PORTC |= (1<< PINC0);
+					merke_status(true);}
+				else
+				{PORTC &= ~(1<<PINC0);
+ 432:	40 98       	cbi	0x08, 0	; 8
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 434:	13 96       	adiw	r26, 0x03	; 3
+ 436:	1c 92       	st	X, r1
+ 438:	13 97       	sbiw	r26, 0x03	; 3
+ 43a:	4d c0       	rjmp	.+154    	; 0x4d6 <__LOCK_REGION_LENGTH__+0xd6>
+				else
+				{PORTC &= ~(1<<PINC0);
+					merke_status(false);}
+				break;
+				
+				case 1:	if (Status == true)
+ 43c:	99 23       	and	r25, r25
+ 43e:	31 f0       	breq	.+12     	; 0x44c <__LOCK_REGION_LENGTH__+0x4c>
+				{ PORTC |= (1<< PINC1);
+ 440:	41 9a       	sbi	0x08, 1	; 8
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 442:	81 e0       	ldi	r24, 0x01	; 1
+ 444:	13 96       	adiw	r26, 0x03	; 3
+ 446:	8c 93       	st	X, r24
+ 448:	13 97       	sbiw	r26, 0x03	; 3
+ 44a:	45 c0       	rjmp	.+138    	; 0x4d6 <__LOCK_REGION_LENGTH__+0xd6>
+				
+				case 1:	if (Status == true)
+				{ PORTC |= (1<< PINC1);
+					merke_status(true);}
+				else
+				{PORTC &= ~(1<<PINC1);
+ 44c:	41 98       	cbi	0x08, 1	; 8
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 44e:	13 96       	adiw	r26, 0x03	; 3
+ 450:	1c 92       	st	X, r1
+ 452:	13 97       	sbiw	r26, 0x03	; 3
+ 454:	40 c0       	rjmp	.+128    	; 0x4d6 <__LOCK_REGION_LENGTH__+0xd6>
+				else
+				{PORTC &= ~(1<<PINC1);
+					merke_status(false);}
+				break;
+				
+				case 2:	if (Status == true)
+ 456:	99 23       	and	r25, r25
+ 458:	31 f0       	breq	.+12     	; 0x466 <__LOCK_REGION_LENGTH__+0x66>
+				{ PORTC |= (1<< PINC2);
+ 45a:	42 9a       	sbi	0x08, 2	; 8
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 45c:	81 e0       	ldi	r24, 0x01	; 1
+ 45e:	13 96       	adiw	r26, 0x03	; 3
+ 460:	8c 93       	st	X, r24
+ 462:	13 97       	sbiw	r26, 0x03	; 3
+ 464:	38 c0       	rjmp	.+112    	; 0x4d6 <__LOCK_REGION_LENGTH__+0xd6>
+				
+				case 2:	if (Status == true)
+				{ PORTC |= (1<< PINC2);
+					merke_status(true);}
+				else
+				{PORTC &= ~(1<<PINC2);
+ 466:	42 98       	cbi	0x08, 2	; 8
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 468:	13 96       	adiw	r26, 0x03	; 3
+ 46a:	1c 92       	st	X, r1
+ 46c:	13 97       	sbiw	r26, 0x03	; 3
+ 46e:	33 c0       	rjmp	.+102    	; 0x4d6 <__LOCK_REGION_LENGTH__+0xd6>
+				else
+				{PORTC &= ~(1<<PINC2);
+					merke_status(false);}
+				break;
+				
+				case 3:	if (Status == true)
+ 470:	99 23       	and	r25, r25
+ 472:	31 f0       	breq	.+12     	; 0x480 <__LOCK_REGION_LENGTH__+0x80>
+				{ PORTC |= (1<< PINC3);
+ 474:	43 9a       	sbi	0x08, 3	; 8
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 476:	81 e0       	ldi	r24, 0x01	; 1
+ 478:	13 96       	adiw	r26, 0x03	; 3
+ 47a:	8c 93       	st	X, r24
+ 47c:	13 97       	sbiw	r26, 0x03	; 3
+ 47e:	2b c0       	rjmp	.+86     	; 0x4d6 <__LOCK_REGION_LENGTH__+0xd6>
+				
+				case 3:	if (Status == true)
+				{ PORTC |= (1<< PINC3);
+					merke_status(true);}
+				else
+				{PORTC &= ~(1<<PINC3);
+ 480:	43 98       	cbi	0x08, 3	; 8
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 482:	13 96       	adiw	r26, 0x03	; 3
+ 484:	1c 92       	st	X, r1
+ 486:	13 97       	sbiw	r26, 0x03	; 3
+ 488:	26 c0       	rjmp	.+76     	; 0x4d6 <__LOCK_REGION_LENGTH__+0xd6>
+				else
+				{PORTC &= ~(1<<PINC3);
+					merke_status(false);}
+				break;
+				
+				case 4:	if (Status == true)
+ 48a:	99 23       	and	r25, r25
+ 48c:	31 f0       	breq	.+12     	; 0x49a <__LOCK_REGION_LENGTH__+0x9a>
+				{ PORTC |= (1<< PINC4);
+ 48e:	44 9a       	sbi	0x08, 4	; 8
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 490:	81 e0       	ldi	r24, 0x01	; 1
+ 492:	13 96       	adiw	r26, 0x03	; 3
+ 494:	8c 93       	st	X, r24
+ 496:	13 97       	sbiw	r26, 0x03	; 3
+ 498:	1e c0       	rjmp	.+60     	; 0x4d6 <__LOCK_REGION_LENGTH__+0xd6>
+				
+				case 4:	if (Status == true)
+				{ PORTC |= (1<< PINC4);
+					merke_status(true);}
+				else
+				{PORTC &= ~(1<<PINC4);
+ 49a:	44 98       	cbi	0x08, 4	; 8
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 49c:	13 96       	adiw	r26, 0x03	; 3
+ 49e:	1c 92       	st	X, r1
+ 4a0:	13 97       	sbiw	r26, 0x03	; 3
+ 4a2:	19 c0       	rjmp	.+50     	; 0x4d6 <__LOCK_REGION_LENGTH__+0xd6>
+				else
+				{PORTC &= ~(1<<PINC4);
+					merke_status(false);}
+				break;
+				
+				case 5:	if (Status == true)
+ 4a4:	99 23       	and	r25, r25
+ 4a6:	31 f0       	breq	.+12     	; 0x4b4 <__LOCK_REGION_LENGTH__+0xb4>
+				{ PORTC |= (1<< PINC5);
+ 4a8:	45 9a       	sbi	0x08, 5	; 8
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 4aa:	81 e0       	ldi	r24, 0x01	; 1
+ 4ac:	13 96       	adiw	r26, 0x03	; 3
+ 4ae:	8c 93       	st	X, r24
+ 4b0:	13 97       	sbiw	r26, 0x03	; 3
+ 4b2:	11 c0       	rjmp	.+34     	; 0x4d6 <__LOCK_REGION_LENGTH__+0xd6>
+				
+				case 5:	if (Status == true)
+				{ PORTC |= (1<< PINC5);
+					merke_status(true);}
+				else
+				{PORTC &= ~(1<<PINC5);
+ 4b4:	45 98       	cbi	0x08, 5	; 8
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 4b6:	13 96       	adiw	r26, 0x03	; 3
+ 4b8:	1c 92       	st	X, r1
+ 4ba:	13 97       	sbiw	r26, 0x03	; 3
+ 4bc:	0c c0       	rjmp	.+24     	; 0x4d6 <__LOCK_REGION_LENGTH__+0xd6>
+				else
+				{PORTC &= ~(1<<PINC5);
+					merke_status(false);}
+				break;
+				
+				case 6:	if (Status == true)
+ 4be:	99 23       	and	r25, r25
+ 4c0:	31 f0       	breq	.+12     	; 0x4ce <__LOCK_REGION_LENGTH__+0xce>
+				{ PORTC |= (1<< PINC6);
+ 4c2:	46 9a       	sbi	0x08, 6	; 8
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 4c4:	81 e0       	ldi	r24, 0x01	; 1
+ 4c6:	13 96       	adiw	r26, 0x03	; 3
+ 4c8:	8c 93       	st	X, r24
+ 4ca:	13 97       	sbiw	r26, 0x03	; 3
+ 4cc:	04 c0       	rjmp	.+8      	; 0x4d6 <__LOCK_REGION_LENGTH__+0xd6>
+				
+				case 6:	if (Status == true)
+				{ PORTC |= (1<< PINC6);
+					merke_status(true);}
+				else
+				{PORTC &= ~(1<<PINC6);
+ 4ce:	46 98       	cbi	0x08, 6	; 8
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 4d0:	13 96       	adiw	r26, 0x03	; 3
+ 4d2:	1c 92       	st	X, r1
+ 4d4:	13 97       	sbiw	r26, 0x03	; 3
+				default: //# warning "The choosen pin number is not valid. Only 0-6 are allowed on Port C"
+				break;
+							}
+		}
+		
+		if (private_Port == 'D')
+ 4d6:	8c 91       	ld	r24, X
+ 4d8:	84 34       	cpi	r24, 0x44	; 68
+ 4da:	09 f0       	breq	.+2      	; 0x4de <__LOCK_REGION_LENGTH__+0xde>
+ 4dc:	65 c0       	rjmp	.+202    	; 0x5a8 <__LOCK_REGION_LENGTH__+0x1a8>
+		{
+			switch(private_Nummer_Pin)
+ 4de:	11 96       	adiw	r26, 0x01	; 1
+ 4e0:	ec 91       	ld	r30, X
+ 4e2:	11 97       	sbiw	r26, 0x01	; 1
+ 4e4:	4e 2f       	mov	r20, r30
+ 4e6:	50 e0       	ldi	r21, 0x00	; 0
+ 4e8:	48 30       	cpi	r20, 0x08	; 8
+ 4ea:	51 05       	cpc	r21, r1
+ 4ec:	08 f0       	brcs	.+2      	; 0x4f0 <__LOCK_REGION_LENGTH__+0xf0>
+ 4ee:	5c c0       	rjmp	.+184    	; 0x5a8 <__LOCK_REGION_LENGTH__+0x1a8>
+ 4f0:	fa 01       	movw	r30, r20
+ 4f2:	e6 5a       	subi	r30, 0xA6	; 166
+ 4f4:	ff 4f       	sbci	r31, 0xFF	; 255
+ 4f6:	0c 94 d5 02 	jmp	0x5aa	; 0x5aa <__tablejump2__>
+			{
+				case 0:	if (Status == true)
+ 4fa:	99 23       	and	r25, r25
+ 4fc:	29 f0       	breq	.+10     	; 0x508 <__LOCK_REGION_LENGTH__+0x108>
+				{ PORTD |= (1<< PIND0);
+ 4fe:	58 9a       	sbi	0x0b, 0	; 11
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 500:	81 e0       	ldi	r24, 0x01	; 1
+ 502:	13 96       	adiw	r26, 0x03	; 3
+ 504:	8c 93       	st	X, r24
+ 506:	08 95       	ret
+			{
+				case 0:	if (Status == true)
+				{ PORTD |= (1<< PIND0);
+					merke_status(true);}
+				else
+				{PORTD &= ~(1<<PIND0);
+ 508:	58 98       	cbi	0x0b, 0	; 11
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 50a:	13 96       	adiw	r26, 0x03	; 3
+ 50c:	1c 92       	st	X, r1
+ 50e:	08 95       	ret
+				else
+				{PORTD &= ~(1<<PIND0);
+					merke_status(false);}
+				break;
+				
+				case 1:	if (Status == true)
+ 510:	99 23       	and	r25, r25
+ 512:	29 f0       	breq	.+10     	; 0x51e <__LOCK_REGION_LENGTH__+0x11e>
+				{ PORTD |= (1<< PIND1);
+ 514:	59 9a       	sbi	0x0b, 1	; 11
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 516:	81 e0       	ldi	r24, 0x01	; 1
+ 518:	13 96       	adiw	r26, 0x03	; 3
+ 51a:	8c 93       	st	X, r24
+ 51c:	08 95       	ret
+				
+				case 1:	if (Status == true)
+				{ PORTD |= (1<< PIND1);
+					merke_status(true);}
+				else
+				{PORTD &= ~(1<<PIND1);
+ 51e:	59 98       	cbi	0x0b, 1	; 11
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 520:	13 96       	adiw	r26, 0x03	; 3
+ 522:	1c 92       	st	X, r1
+ 524:	08 95       	ret
+				else
+				{PORTD &= ~(1<<PIND1);
+					merke_status(false);}
+				break;
+				
+				case 2:	if (Status == true)
+ 526:	99 23       	and	r25, r25
+ 528:	29 f0       	breq	.+10     	; 0x534 <__LOCK_REGION_LENGTH__+0x134>
+				{ PORTD |= (1<< PIND2);
+ 52a:	5a 9a       	sbi	0x0b, 2	; 11
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 52c:	81 e0       	ldi	r24, 0x01	; 1
+ 52e:	13 96       	adiw	r26, 0x03	; 3
+ 530:	8c 93       	st	X, r24
+ 532:	08 95       	ret
+				
+				case 2:	if (Status == true)
+				{ PORTD |= (1<< PIND2);
+					merke_status(true);}
+				else
+				{PORTD &= ~(1<<PIND2);
+ 534:	5a 98       	cbi	0x0b, 2	; 11
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 536:	13 96       	adiw	r26, 0x03	; 3
+ 538:	1c 92       	st	X, r1
+ 53a:	08 95       	ret
+				else
+				{PORTD &= ~(1<<PIND2);
+					merke_status(false);}
+				break;
+				
+				case 3:	if (Status == true)
+ 53c:	99 23       	and	r25, r25
+ 53e:	29 f0       	breq	.+10     	; 0x54a <__LOCK_REGION_LENGTH__+0x14a>
+				{ PORTD |= (1<< PIND3);
+ 540:	5b 9a       	sbi	0x0b, 3	; 11
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 542:	81 e0       	ldi	r24, 0x01	; 1
+ 544:	13 96       	adiw	r26, 0x03	; 3
+ 546:	8c 93       	st	X, r24
+ 548:	08 95       	ret
+				
+				case 3:	if (Status == true)
+				{ PORTD |= (1<< PIND3);
+					merke_status(true);}
+				else
+				{PORTD &= ~(1<<PIND3);
+ 54a:	5b 98       	cbi	0x0b, 3	; 11
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 54c:	13 96       	adiw	r26, 0x03	; 3
+ 54e:	1c 92       	st	X, r1
+ 550:	08 95       	ret
+				else
+				{PORTD &= ~(1<<PIND3);
+					merke_status(false);}
+				break;
+				
+				case 4:	if (Status == true)
+ 552:	99 23       	and	r25, r25
+ 554:	29 f0       	breq	.+10     	; 0x560 <__LOCK_REGION_LENGTH__+0x160>
+				{ PORTD |= (1<< PIND4);
+ 556:	5c 9a       	sbi	0x0b, 4	; 11
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 558:	81 e0       	ldi	r24, 0x01	; 1
+ 55a:	13 96       	adiw	r26, 0x03	; 3
+ 55c:	8c 93       	st	X, r24
+ 55e:	08 95       	ret
+				
+				case 4:	if (Status == true)
+				{ PORTD |= (1<< PIND4);
+					merke_status(true);}
+				else
+				{PORTD &= ~(1<<PIND4);
+ 560:	5c 98       	cbi	0x0b, 4	; 11
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 562:	13 96       	adiw	r26, 0x03	; 3
+ 564:	1c 92       	st	X, r1
+ 566:	08 95       	ret
+				else
+				{PORTD &= ~(1<<PIND4);
+					merke_status(false);}
+				break;
+				
+				case 5:	if (Status == true)
+ 568:	99 23       	and	r25, r25
+ 56a:	29 f0       	breq	.+10     	; 0x576 <__LOCK_REGION_LENGTH__+0x176>
+				{ PORTD |= (1<< PIND5);
+ 56c:	5d 9a       	sbi	0x0b, 5	; 11
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 56e:	81 e0       	ldi	r24, 0x01	; 1
+ 570:	13 96       	adiw	r26, 0x03	; 3
+ 572:	8c 93       	st	X, r24
+ 574:	08 95       	ret
+				
+				case 5:	if (Status == true)
+				{ PORTD |= (1<< PIND5);
+					merke_status(true);}
+				else
+				{PORTD &= ~(1<<PIND5);
+ 576:	5d 98       	cbi	0x0b, 5	; 11
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 578:	13 96       	adiw	r26, 0x03	; 3
+ 57a:	1c 92       	st	X, r1
+ 57c:	08 95       	ret
+				else
+				{PORTD &= ~(1<<PIND5);
+					merke_status(false);}
+				break;
+				
+				case 6:	if (Status == true)
+ 57e:	99 23       	and	r25, r25
+ 580:	29 f0       	breq	.+10     	; 0x58c <__LOCK_REGION_LENGTH__+0x18c>
+				{ PORTD |= (1<< PIND6);
+ 582:	5e 9a       	sbi	0x0b, 6	; 11
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 584:	81 e0       	ldi	r24, 0x01	; 1
+ 586:	13 96       	adiw	r26, 0x03	; 3
+ 588:	8c 93       	st	X, r24
+ 58a:	08 95       	ret
+				
+				case 6:	if (Status == true)
+				{ PORTD |= (1<< PIND6);
+					merke_status(true);}
+				else
+				{PORTD &= ~(1<<PIND6);
+ 58c:	5e 98       	cbi	0x0b, 6	; 11
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 58e:	13 96       	adiw	r26, 0x03	; 3
+ 590:	1c 92       	st	X, r1
+ 592:	08 95       	ret
+				else
+				{PORTD &= ~(1<<PIND6);
+					merke_status(false);}
+				break;
+				
+				case 7:	if (Status == true)
+ 594:	99 23       	and	r25, r25
+ 596:	29 f0       	breq	.+10     	; 0x5a2 <__LOCK_REGION_LENGTH__+0x1a2>
+				{ PORTD |= (1<< PIND7);
+ 598:	5f 9a       	sbi	0x0b, 7	; 11
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 59a:	81 e0       	ldi	r24, 0x01	; 1
+ 59c:	13 96       	adiw	r26, 0x03	; 3
+ 59e:	8c 93       	st	X, r24
+ 5a0:	08 95       	ret
+				
+				case 7:	if (Status == true)
+				{ PORTD |= (1<< PIND7);
+					merke_status(true);}
+				else
+				{PORTD &= ~(1<<PIND7);
+ 5a2:	5f 98       	cbi	0x0b, 7	; 11
+	initialisierePin();  
+}
+
+void Pin::merke_status(bool status)
+{
+	status_intern = status;
+ 5a4:	13 96       	adiw	r26, 0x03	; 3
+ 5a6:	1c 92       	st	X, r1
+ 5a8:	08 95       	ret
+
+000005aa <__tablejump2__>:
+ 5aa:	ee 0f       	add	r30, r30
+ 5ac:	ff 1f       	adc	r31, r31
+ 5ae:	05 90       	lpm	r0, Z+
+ 5b0:	f4 91       	lpm	r31, Z
+ 5b2:	e0 2d       	mov	r30, r0
+ 5b4:	09 94       	ijmp
+
+000005b6 <_exit>:
+ 5b6:	f8 94       	cli
+
+000005b8 <__stop_program>:
+ 5b8:	ff cf       	rjmp	.-2      	; 0x5b8 <__stop_program>

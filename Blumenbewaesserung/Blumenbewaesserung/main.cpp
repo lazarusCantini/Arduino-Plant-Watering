@@ -8,11 +8,19 @@
  */ 
 
 #include <avr/io.h>
+#include "Pin_ATMEGA328_V0_1.h"
+
+#ifndef F_CPU
+#define F_CPU 16000000UL				// CPU Takt
+#endif
 
 
 int main(void)
 {
+	Pin BuildInLed('B', 6, true);
+	
     /* Replace with your application code */
+	BuildInLed.setze_Status(true);
     while (1) 
     {
     }
@@ -21,7 +29,7 @@ int main(void)
 /*
 
 */
-
+/*
 // Hardwire Set-Up
 const int pumpPin =  1;// Number of the Pin where the Relay fot the pump is attached
 const int CheckUpLed = 2; //Number of the Check-UP Led. The moisture measurement is not constant. Measuring two times a day will do the Job. When doing a measurement, switch this LED on
@@ -65,3 +73,4 @@ void loop() {
     digitalWrite(ledPin, ledState);
   }
 }
+*/
