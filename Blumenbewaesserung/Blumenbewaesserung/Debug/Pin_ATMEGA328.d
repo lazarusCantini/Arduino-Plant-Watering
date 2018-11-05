@@ -1,5 +1,5 @@
-Pin_ATMEGA328_V0_1.d Pin_ATMEGA328_V0_1.o: .././Pin_ATMEGA328_V0_1.cpp \
- .././Pin_ATMEGA328_V0_1.h \
+Pin_ATMEGA328.d Pin_ATMEGA328.o: .././Pin_ATMEGA328.cpp \
+ .././Pin_ATMEGA328.h \
  d:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdint-gcc.h \
  d:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  d:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
@@ -13,7 +13,7 @@ Pin_ATMEGA328_V0_1.d Pin_ATMEGA328_V0_1.o: .././Pin_ATMEGA328_V0_1.cpp \
  d:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
  d:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h
 
-.././Pin_ATMEGA328_V0_1.h:
+.././Pin_ATMEGA328.h:
 
 d:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdint-gcc.h:
 

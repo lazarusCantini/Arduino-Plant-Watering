@@ -7,22 +7,27 @@
  * By the way, it should teach me, how to use github
  */ 
 
-#include <avr/io.h>
-#include "Pin_ATMEGA328_V0_1.h"
-
 #ifndef F_CPU
 #define F_CPU 16000000UL				// CPU Takt
 #endif
 
+#include <avr/io.h>
+#include "Pin_ATMEGA328.h"
+#include <util/delay.h>
+
+
+
 
 int main(void)
 {
-	Pin BuildInLed('B', 6, true);
+	Pin BuildInLed('C', 5, true);
 	
     /* Replace with your application code */
 	BuildInLed.setze_Status(true);
     while (1) 
     {
+		_delay_ms(1000);
+		BuildInLed.toggle_Pin();
     }
 }
 
