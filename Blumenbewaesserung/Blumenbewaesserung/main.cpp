@@ -15,20 +15,96 @@
 #include "Pin_ATMEGA328.h"
 #include <util/delay.h>
 
+#include <avr/interrupt.h>
+
+//Variablen für die Zeit
+volatile unsigned int millisekunden = 0;
+volatile unsigned int sekunde = 0;
+volatile unsigned int minute = 0;
+volatile unsigned int stunde = 0;
 
 
+//Sensor is High wenn Dry
 
 int main(void)
 {
-	Pin BuildInLed('C', 5, true);
+	TCCR0A |= (1 << COM0A1);
+	TCCR0B |= (1 << CS01) | (1 << CS00);
+	 // ((1000000/8)/1000) = 125
+	 OCR0A = 125-1;
+	 
+	   // Compare Interrupt erlauben
+	   TIMSK0 |= (1<<OCIE0A);
+	   
+	  // Global Interrupts aktivieren
+	  sei();
+	   
+	Pin WateringPump('C', 5, false);
+	Pin PoweringHumidMeter ('C', 4, false);
+	Pin PlantToDry('C', 3, true);
 	
-    /* Replace with your application code */
-	BuildInLed.setze_Status(true);
+    //Init all	WateringPump.setze_Status(false);
+	PoweringHumidMeter.setze_Status(false);
+	
     while (1) 
     {
-		_delay_ms(1000);
-		BuildInLed.toggle_Pin();
+		//_delay_ms(1000);
+		//WateringPump.toggle_Pin();
+		if (stunde % 4 == 0)
+		{
+			if (minute == 0)
+			{
+				PoweringHumidMeter.setze_Status(true);
+				_delay_ms(2000);
+			}
+
+			if ((minute < 1) && (PlantToDry.lese_status()))
+			{
+				WateringPump.setze_Status(false); 
+			}
+			else
+			{
+				WateringPump.setze_Status(true);
+				PoweringHumidMeter.setze_Status(false);
+			}
+			
+
+		}
+		
+
     }
+}
+
+
+
+/*
+Der Compare Interrupt Handler
+wird aufgerufen, wenn
+TCNT0 = OCR0A = 125-1
+ist (125 Schritte), d.h. genau alle 1 ms
+*/
+ISR (TIMER0_COMPA_vect)
+{
+	millisekunden++;
+	if(millisekunden == 1000)
+	{
+		sekunde++;
+		millisekunden = 0;
+		if(sekunde == 60)
+		{
+			minute++;
+			sekunde = 0;
+		}
+		if(minute == 60)
+		{
+			stunde++;
+			minute = 0;
+		}
+		if(stunde == 24)
+		{
+			stunde = 0;
+		}
+	}
 }
 
 /*
