@@ -26,6 +26,7 @@ volatile unsigned int stunde = 0;
 
 //Sensor is High wenn Dry
 
+__attribute__((optimize(0)))
 int main(void)
 {
 	TCCR0A |= (1 << COM0A1);
@@ -45,6 +46,7 @@ int main(void)
 	
     //Init all	WateringPump.setze_Status(false);
 	PoweringHumidMeter.setze_Status(false);
+	WateringPump.setze_Status(true);
 	
     while (1) 
     {
@@ -52,26 +54,25 @@ int main(void)
 		//WateringPump.toggle_Pin();
 		if (stunde % 4 == 0)
 		{
-			if (minute == 0)
+			if ((minute == 0) && (sekunde < 2))
 			{
 				PoweringHumidMeter.setze_Status(true);
-				_delay_ms(2000);
-			}
-
-			if ((minute < 1) && (PlantToDry.lese_status()))
-			{
-				WateringPump.setze_Status(false); 
+				//_delay_ms(2000);
 			}
 			else
 			{
-				WateringPump.setze_Status(true);
-				PoweringHumidMeter.setze_Status(false);
+				if ((minute < 1) && (PlantToDry.lese_status()))
+				{
+					WateringPump.setze_Status(false);
+				}
+				else
+				{
+					WateringPump.setze_Status(true);
+					PoweringHumidMeter.setze_Status(false);
+				}
 			}
-			
 
 		}
-		
-
     }
 }
 
@@ -106,52 +107,3 @@ ISR (TIMER0_COMPA_vect)
 		}
 	}
 }
-
-/*
-
-*/
-/*
-// Hardwire Set-Up
-const int pumpPin =  1;// Number of the Pin where the Relay fot the pump is attached
-const int CheckUpLed = 2; //Number of the Check-UP Led. The moisture measurement is not constant. Measuring two times a day will do the Job. When doing a measurement, switch this LED on
-
-bool CheckUpLedState = false;
-bool pumpState = false;
-bool moistureToDry = false;
-
-// Generally, you should use "unsigned long" for variables that hold time
-// The value will quickly become too large for an int to store
-unsigned long previousMillis = 0;        // will store last time LED was updated
-
-// constants won't change:
-const long interval = 1000*60;           // for testing purpose measuring moisture every 60 seconds
-
-void setup() {
-  // set the digital pin as output:
-  pinMode(ledPin, OUTPUT);
-}
-
-void loop() {
-  // here is where you'd put code that needs to be running all the time.
-
-  // check to see if it's time to blink the LED; that is, if the difference
-  // between the current time and last time you blinked the LED is bigger than
-  // the interval at which you want to blink the LED.
-  unsigned long currentMillis = millis();
-
-  if (currentMillis - previousMillis >= interval) {
-    // save the last time you blinked the LED
-    previousMillis = currentMillis;
-
-    // if the LED is off turn it on and vice-versa:
-    if (ledState == LOW) {
-      ledState = HIGH;
-    } else {
-      ledState = LOW;
-    }
-
-    // set the LED with the ledState of the variable:
-    digitalWrite(ledPin, ledState);
-  }
-}
-*/

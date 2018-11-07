@@ -45,8 +45,170 @@ void Pin::toggle_Pin()
 
 bool Pin::lese_status()
 {
+
+		if (private_Port == 'B')
+		{
+			switch(private_Nummer_Pin)
+			{
+				case 0:	if (PINB & (1<<PINB0))
+					{merke_status(true);}
+				else
+					{merke_status(false);}
+				break;
+				
+				case 1:	if (PINB & (1<<PINB1))
+					{merke_status(true);}
+				else
+					{merke_status(false);}
+				break;
+				
+				case 2:	if (PINB & (1<<PINB2))
+					{merke_status(true);}
+				else
+					{merke_status(false);}
+				break;
+				
+				case 3:	if (PINB & (1<<PINB3))
+					{merke_status(true);}
+				else
+					{merke_status(false);}
+				break;
+					
+				case 4:	if (PINB & (1<<PINB4))
+					{merke_status(true);}
+				else
+					{merke_status(false);}
+				break;
+				
+				case 5:	if (PINB & (1<<PINB5))
+					{merke_status(true);}
+				else
+					{merke_status(false);}
+				break;
+				
+				case 6:	if (PINB & (1<<PINB6))
+					{merke_status(true);}
+				else
+					{merke_status(false);}
+				break;
+					
+				case 7:	if (PINB & (1<<PINB7))
+					{merke_status(true);}
+				else
+					{merke_status(false);}
+				break;		
+													
+				default: //# warning "The choosen pin number is not valid. Only 0-7 are allowed on Port B"
+				break;
+				
+			}
+		}
+
+		if (private_Port == 'C')
+		{
+			switch(private_Nummer_Pin)
+			{
+				case 0:	if (PINC & (1<<PINC0))
+				{merke_status(true);}
+				else
+				{merke_status(false);}
+				break;
+				
+				case 1:	if (PINC & (1<<PINC1))
+				{merke_status(true);}
+				else
+				{merke_status(false);}
+				break;
+				
+				case 2:	if (PINC & (1<<PINC2))
+				{merke_status(true);}
+				else
+				{merke_status(false);}
+				break;
+				
+				case 3:	if (PINC & (1<<PINC3))
+				{merke_status(true);}
+				else
+				{merke_status(false);}
+				break;
+				
+				case 4:	if (PINC & (1<<PINC4))
+				{merke_status(true);}
+				else
+				{merke_status(false);}
+				break;
+				
+				case 5:	if (PINC & (1<<PINC5))
+				{merke_status(true);}
+				else
+				{merke_status(false);}
+				break;
+				
+				case 6:	if (PINC & (1<<PINC6))
+				{merke_status(true);}
+				else
+				{merke_status(false);}
+				break;
+				
+			}
+		}
+		
+		if (private_Port == 'D')
+		{
+			switch(private_Nummer_Pin)
+			{
+				case 0:	if (PIND & (1<<PIND0))
+				{merke_status(true);}
+				else
+				{merke_status(false);}
+				break;
+				
+				case 1:	if (PIND & (1<<PIND1))
+				{merke_status(true);}
+				else
+				{merke_status(false);}
+				break;
+				
+				case 2:	if (PIND & (1<<PIND2))
+				{merke_status(true);}
+				else
+				{merke_status(false);}
+				break;
+				
+				case 3:	if (PIND & (1<<PIND3))
+				{merke_status(true);}
+				else
+				{merke_status(false);}
+				break;
+				
+				case 4:	if (PIND & (1<<PIND4))
+				{merke_status(true);}
+				else
+				{merke_status(false);}
+				break;
+				
+				case 5:	if (PIND & (1<<PIND5))
+				{merke_status(true);}
+				else
+				{merke_status(false);}
+				break;
+				
+				case 6:	if (PIND & (1<<PIND6))
+				{merke_status(true);}
+				else
+				{merke_status(false);}
+				break;
+				
+				case 7:	if (PIND & (1<<PIND7))
+				{merke_status(true);}
+				else
+				{merke_status(false);}
+				break;			}
+		}
 	return status_intern;
-}
+}	
+	
+
 
 char Pin::lese_Port()
 {
